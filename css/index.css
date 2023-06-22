@@ -7,15 +7,41 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-family: "Suboleya Regular";
+  font-size: 35px;
+}
+
+ul {
+  font-family: "Suboleya Regular";
+  list-style: none;
+}
+ul > li {
+  padding-top: 5px;
 }
 
 .header {
+  font-family: "Suboleya Regular";
   text-align: center;
-  width: 100%;
+  width: 200px;
   height: 50px;
   margin-bottom: 20px;
   padding-top: 10px;
+  padding-left: 30px;
+}
+
+.header > .title {
+  text-align: left;
+  font-size: 20px;
+}
+
+.header > .description {
+  font-size: 10px;
+  text-align: right;
 }
 
 .container {
@@ -28,6 +54,7 @@ body {
   float: left;
   vertical-align: top;
   font-family: "Suboleya Regular";
+  font-size: 20px;
 }
 
 .menu ul {
@@ -43,16 +70,46 @@ a:hover {
   color: blue;
 }
 
+.status {
+  margin: auto auto;
+  text-align: center;
+}
+
+.ava {
+  margin: auto auto;
+  width: 200px;
+  text-align: center;
+}
+
+.ava img {
+  height: 150px;
+  width: 150px;
+  border-radius: 40px;
+}
+
 .content {
   min-width: 500px;
   padding-left: 20px;
   margin-left: 240px;
 }
 
-.ava img {
-  height: 100px;
-  width: 100px;
-  border-radius: 40px;
+.pc-photo {
+  display: inline;
+}
+
+.pc-photo > .photo {
+  height: 250px;
+}
+
+#link ul {
+  list-style: none;
+  padding: 10px;
+  font-family: "Suboleya Regular";
+  font-size: 20px;
+}
+
+#link ul > li {
+  padding-top: 10px;
 }
 
 .footer {

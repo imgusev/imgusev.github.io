@@ -5,6 +5,7 @@
 
 html,
 body {
+  min-width: 378px;
   margin: 0;
   padding: 0;
   /* background-color: blanchedalmond; */
@@ -81,9 +82,9 @@ a:hover {
 }
 
 .content {
-  min-width: 500px;
-  padding-left: 20px;
-  margin-left: 240px;
+  min-width: 378px;
+  /* padding-left: 20px;
+  margin-left: 240px; */
 }
 
 .pc-photo {

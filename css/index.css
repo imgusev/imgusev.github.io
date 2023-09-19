@@ -26,12 +26,13 @@ ul > li {
 }
 
 .header {
+  min-width: 378px;
   font-family: 'Suboleya Regular';
   text-align: center;
   height: 70px;
   margin-bottom: 20px;
-  padding-top: 10px;
-  padding-left: 30px;
+  /* padding-top: 10px; */
+  /* padding-left: 30px;  */
   background-color: white;
 }
 
@@ -82,13 +83,13 @@ a:hover {
 }
 
 .content {
-  min-width: 378px;
-  /* padding-left: 20px;
-  margin-left: 240px; */
+  /* min-width: 378px; */
+  /* padding-left: 20px; */
+  /* margin-left: 240px; */
 }
 
 .pc-photo {
-  display: inline;
+  /* display: inline; */
 }
 
 .pc-photo > .photo {
@@ -107,6 +108,7 @@ a:hover {
 }
 
 .footer {
+  min-width: 378px;
   font-family: 'Suboleya Regular';
   text-align: center;
   height: 60px;

@@ -5,122 +5,132 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/css/index.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <script defer src="/js/bootstrap.bundle.min.js"></script>
     <title>IMGusev - GitHub page</title>
   </head>
   <body>
-    <div class="header">
-      <div class="title">Гусев Илья (IMGusev)</div>
-      <div class="description">IT специалист</div>
-    </div>
-    <div class="container">
-      <div class="menu">
-        <div class="ava"><img src="/images/ava.png" alt="Моё фото" /></div>
-        <ul>
-          <li><a href="#info">Информация</a></li>
-          <li><a href="#pc">Компьютеры</a></li>
-          <li><a href="#dev">Программирование</a></li>
-          <li><a href="#link">Полезные ссылки</a></li>
-        </ul>
-        <div class="status">
-          CodeWars<br />
-          <a href="https://www.codewars.com/users/imgusev"
-            ><img src="https://www.codewars.com/users/imgusev/badges/micro" alt="CodeWars" /></a
-          ><br />
-          <a href="https://www.linkedin.com/in/imgusev/" target="_blank">linkedin</a><br />
-          <a href="https://t.me/imgusev" target="_blank">Telegram</a><br />
-          <a href="https://github.com/imgusev" target="_blank">GitHub</a><br />
-          <br />
-        </div>
+    <div class="container-fluid">
+      <div class="header container sticky-top">
+        <div class="title">Гусев Илья (IMGusev)</div>
+        <div class="description">Full Stack Developer</div>
       </div>
-      <div class="content">
-        <div id="info">
-          <h2>Инфо</h2>
-          <div class="about">
-            <p>
-              Родился 30 марта 1985 года, вырос в городе Вологда Вологодской области. В 2002 году закончил среднюю
-              образовательную школу №3 г. Вологда. Работаю с компьютерной техникой с 1995 года.
-            </p>
-            <p>Увлекаюсь фотографией, играю в бильярд.</p>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg-3 col-md-12">
+            <div class="menu row container-sm">
+              <div class="ava col-lg-12 col-md-4 col-sm-6"><img src="/images/ava.png" alt="Моё фото" /></div>
+              <div class="col-lg-12 col-md-4 col-sm-6">
+                <ul>
+                  <li><a href="#info">Информация</a></li>
+                  <li><a href="#pc">Компьютеры</a></li>
+                  <li><a href="#dev">Программирование</a></li>
+                  <li><a href="#link">Полезные ссылки</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-12 col-md-4 col-sm-12">
+                <div class="status">
+                  CodeWars<br />
+                  <a href="https://www.codewars.com/users/imgusev"
+                    ><img src="https://www.codewars.com/users/imgusev/badges/micro" alt="CodeWars" /></a
+                  ><br />
+                  <a href="https://www.linkedin.com/in/imgusev/" target="_blank">linkedin</a><br />
+                  <a href="https://t.me/imgusev" target="_blank">Telegram</a><br />
+                  <a href="https://github.com/imgusev" target="_blank">GitHub</a><br />
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-9 col-md-12">
+            <div class="content container">
+              <div id="info">
+                <h2>Инфо</h2>
+                <div class="about">
+                  <p>
+                    Родился 30 марта 1985 года, вырос в городе Вологда Вологодской области. В 2002 году закончил среднюю
+                    образовательную школу №3 г. Вологда. Работаю с компьютерной техникой с 1995 года.
+                  </p>
+                  <p>Увлекаюсь фотографией, играю в бильярд.</p>
+                </div>
+              </div>
+              <div id="pc">
+                <h2>Компьютеры и сети</h2>
+                <p>Компьютеры, сети, интернет - стиль жизни.</p>
+                <p>С 1995 года занимаюсь сборкой и ремонтом компьютерной техники и периферийного оборудования.</p>
+                <div class="pc-photo row text-center">
+                  <img class="photo col" src="/images/pc/004.png" alt="Программирование basic" />
+                  <img class="photo col" src="/images/pc/001.png" alt="Игра по сети в 2000 году" />
+                </div>
+                <p></p>
+              </div>
+
+              <div id="dev">
+                <h2>Программирование и разработка</h2>
+                Языки программирования с которыми я работал:
+                <ul>
+                  <li>PHP</li>
+                  <li>Python</li>
+                  <li>JavaScript</li>
+                  <li>GO</li>
+                </ul>
+                CMS (Система управления содержимым):
+                <ul>
+                  <li>WordPress</li>
+                  <li>Joomla</li>
+                  <li>Bitrix</li>
+                  <li>React</li>
+                </ul>
+                Операционные системы:
+                <ul>
+                  <li>Windows (3.11 - 11)</li>
+                  <li>Linux (Ubuntu, Debain, FreeBSD)</li>
+                  <li>DOS</li>
+                </ul>
+              </div>
+              <div id="link">
+                <h2>Полезные ссылки</h2>
+                <ul>
+                  <li>
+                    <a href="https://github.com/imgusev" target="_blank">GitHub</a>
+                  </li>
+                  <li>
+                    <a href="https://www.codewars.com/users/imgusev" target="_blank">CodeWars</a>
+                  </li>
+                  <li><a target="_blank" href="https://trycode.pw/">trycode</a> - песочница</li>
+                  <li><a target="_blank" href="https://replit.com/">replit</a> - песочница</li>
+                  <li>
+                    <a target="_blank" href="https://jigsaw.w3.org/css-validator/#validate_by_input">CSS валидатор</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://validator.w3.org/#validate_by_input">HTML валидатор</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference"
+                      >Справочник JavaScript</a
+                    >
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://learn.javascript.ru/">Современный учебник JavaScript</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://regex101.com/">Проверка регулярных выражений</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://fonts-online.ru/">Шрифты</a>
+                  </li>
+                  <li>
+                    <a href="https://www.fl.ru/users/imgusev/portfolio/" target="_blank">FreeLancer</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="pc">
-          <h2>Компьютеры и сети</h2>
-          <p>Компьютеры, сети, интернет - стиль жизни.</p>
-          <p>С 1995 года занимаюсь сборкой и ремонтом компьютерной техники и периферийного оборудования.</p>
-          <div class="pc-photo">
-            <img class="photo" src="/images/pc/004.png" alt="Программирование basic" />
-            <img class="photo" src="/images/pc/001.png" alt="Игра по сети в 2000 году" />
-          </div>
-          <p></p>
-        </div>
-
-        <div id="dev">
-          <h2>Программирование и разработка</h2>
-          Языки программирования с которыми я работал:
-          <ul>
-            <li>PHP</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>GO</li>
-          </ul>
-          CMS (Система управления содержимым):
-          <ul>
-            <li>WordPress</li>
-            <li>Joomla</li>
-            <li>Bitrix</li>
-            <li>React</li>
-          </ul>
-          Операционные системы:
-          <ul>
-            <li>Windows (3.11 - 11)</li>
-            <li>Linux (Ubuntu, Debain, FreeBSD)</li>
-            <li>DOS</li>
-          </ul>
-
-          <p>
-            <a href="https://www.fl.ru/users/imgusev/portfolio/" target="_blank">FreeLancer</a>
-          </p>
-        </div>
-        <div id="link">
-          <h2>Полезные ссылки</h2>
-          <ul>
-            <li>
-              <a href="https://github.com/imgusev" target="_blank">GitHub</a>
-            </li>
-            <li>
-              <a href="https://www.codewars.com/users/imgusev" target="_blank">CodeWars</a>
-            </li>
-            <li><a target="_blank" href="https://trycode.pw/">trycode</a> - песочница</li>
-            <li><a target="_blank" href="https://replit.com/">replit</a> - песочница</li>
-            <li>
-              <a target="_blank" href="https://jigsaw.w3.org/css-validator/#validate_by_input">CSS валидатор</a>
-            </li>
-            <li>
-              <a target="_blank" href="https://validator.w3.org/#validate_by_input">HTML валидатор</a>
-            </li>
-            <li>
-              <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference"
-                >Справочник JavaScript</a
-              >
-            </li>
-            <li>
-              <a target="_blank" href="https://learn.javascript.ru/">Современный учебник JavaScript</a>
-            </li>
-            <li>
-              <a target="_blank" href="https://regex101.com/">Проверка регулярных выражений</a>
-            </li>
-            <li>
-              <a target="_blank" href="https://fonts-online.ru/">Шрифты</a>
-            </li>
-            <li>
-              <!-- <a target="_blank" href="https://elbrusboot.camp/">Эльбрус Буткемп</a> -->
-            </li>
-          </ul>
-        </div>
       </div>
-    </div>
-    <div class="footer">
-      <div class="copy">&copy; IMGusev 2023</div>
+      <div class="footer container-fluid sticky-bottom">
+        <div class="copy">&copy; IMGusev 2014-<span id="year"></span></div>
+      </div>
     </div>
     <script src="js/main.js"></script>
   </body>

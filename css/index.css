@@ -72,14 +72,12 @@ a:hover {
 
 .ava {
   margin: auto auto;
-  width: 200px;
   text-align: center;
 }
 
 .ava img {
-  height: 150px;
-  width: 150px;
   border-radius: 40px;
+  width: 100%;
 }
 
 .content {

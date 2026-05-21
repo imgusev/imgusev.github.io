@@ -1,137 +1,526 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/css/index.css?ver=1.0.1" rel="stylesheet" />
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
-    <script defer src="/js/bootstrap.bundle.min.js"></script>
-    <title>IMGusev - GitHub page</title>
+    <meta
+      name="description"
+      content="Илья Гусев (IMGusev) — Full Stack Developer. Опыт, технологический стек, контакты."
+    />
+    <meta property="og:title" content="IMGusev — Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Илья Гусев (IMGusev) — Full Stack Developer. Опыт, технологический стек, контакты."
+    />
+    <meta property="og:image" content="/images/ava.png" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="/images/ava.png" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
+    />
+    <link href="/css/index.css?ver=2.0.0" rel="stylesheet" />
+    <title>IMGusev — Full Stack Developer</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="header container sticky-top">
-        <div class="title">Гусев Илья (IMGusev)</div>
-        <div class="description">Full Stack Developer</div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col col-lg-3 col-md-12 col-sm-12">
-            <div class="menu row">
-              <div class="ava col-lg-12 col-md-4 col-sm-6"><img src="/images/ava.png" alt="Моё фото" /></div>
-              <div class="col-lg-12 col-md-4 col-sm-6">
-                <ul>
-                  <li><a href="#info">Информация</a></li>
-                  <li><a href="#pc">Компьютеры</a></li>
-                  <li><a href="#dev">Программирование</a></li>
-                  <li><a href="#link">Полезные ссылки</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-12 col-md-4 col-sm-12">
-                <div class="status">
-                  CodeWars<br />
-                  <a href="https://www.codewars.com/users/imgusev"
-                    ><img src="https://www.codewars.com/users/imgusev/badges/micro" alt="CodeWars" /></a
-                  ><br />
-                  <a href="https://www.linkedin.com/in/imgusev/" target="_blank">linkedin</a><br />
-                  <a href="https://t.me/imgusev" target="_blank">Telegram</a><br />
-                  <a href="https://github.com/imgusev" target="_blank">GitHub</a><br />
-                  <br />
-                </div>
-              </div>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="nav-logo" href="#top">IMGusev</a>
+        <button
+          class="nav-burger"
+          type="button"
+          aria-label="Меню"
+          aria-expanded="false"
+          data-burger
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" data-nav-list>
+          <li><a href="#about" data-i18n="nav.about">О себе</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Опыт</a></li>
+          <li><a href="#stack" data-i18n="nav.stack">Стек</a></li>
+          <li><a href="#hobby" data-i18n="nav.hobby">Хобби</a></li>
+          <li><a href="#contacts" data-i18n="nav.contacts">Контакты</a></li>
+        </ul>
+        <div class="nav-controls">
+          <button
+            class="control-btn"
+            type="button"
+            data-lang-toggle
+            aria-label="Сменить язык"
+          >
+            <span data-lang-label>EN</span>
+          </button>
+          <button
+            class="control-btn"
+            type="button"
+            data-theme-toggle
+            aria-label="Сменить тему"
+          >
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              />
+            </svg>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <p class="hero-eyebrow" data-i18n="hero.eyebrow">
+              Привет, меня зовут
+            </p>
+            <h1 class="hero-name">
+              <span data-i18n="hero.name">Илья Гусев</span>
+            </h1>
+            <p class="hero-role" data-i18n="hero.role">Full Stack Developer</p>
+            <p class="hero-tagline" data-i18n="hero.tagline">
+              Собираю компьютеры с 1995-го, пишу код с конца девяностых.
+              Помогаю бизнесу превращать идеи в работающие продукты.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contacts" data-i18n="hero.cta">
+                Связаться
+              </a>
+              <a
+                class="btn btn-ghost"
+                href="https://github.com/imgusev"
+                target="_blank"
+                rel="noopener"
+                data-i18n="hero.github"
+              >
+                GitHub
+              </a>
             </div>
           </div>
-          <div class="col col-lg-9 col-md-12">
-            <div class="content container">
-              <div id="info">
-                <h2>Инфо</h2>
-                <div class="about">
-                  <p>
-                    Родился 30 марта 1985 года, вырос в городе Вологда Вологодской области. В 2002 году закончил среднюю
-                    образовательную школу №3 г. Вологда. Работаю с компьютерной техникой с 1995 года.
-                  </p>
-                  <p>Увлекаюсь фотографией, играю в бильярд.</p>
-                </div>
-              </div>
-              <div id="pc">
-                <h2>Компьютеры и сети</h2>
-                <p>Компьютеры, сети, интернет - стиль жизни.</p>
-                <p>С 1995 года занимаюсь сборкой и ремонтом компьютерной техники и периферийного оборудования.</p>
-                <div class="pc-photo row text-center">
-                  <img class="photo col" src="/images/pc/004.png" alt="Программирование basic" />
-                  <img class="photo col" src="/images/pc/001.png" alt="Игра по сети в 2000 году" />
-                </div>
-                <p></p>
-              </div>
-
-              <div id="dev">
-                <h2>Программирование и разработка</h2>
-                Языки программирования с которыми я работал:
-                <ul>
-                  <li>PHP</li>
-                  <li>Python</li>
-                  <li>JavaScript</li>
-                  <li>GO</li>
-                </ul>
-                CMS (Система управления содержимым):
-                <ul>
-                  <li>WordPress</li>
-                  <li>Joomla</li>
-                  <li>Bitrix</li>
-                  <li>React</li>
-                </ul>
-                Операционные системы:
-                <ul>
-                  <li>Windows (3.11 - 11)</li>
-                  <li>Linux (Ubuntu, Debain, FreeBSD)</li>
-                  <li>DOS</li>
-                </ul>
-              </div>
-              <div id="link">
-                <h2>Полезные ссылки</h2>
-                <ul>
-                  <li>
-                    <a href="https://github.com/imgusev" target="_blank">GitHub</a>
-                  </li>
-                  <li>
-                    <a href="https://www.codewars.com/users/imgusev" target="_blank">CodeWars</a>
-                  </li>
-                  <li><a target="_blank" href="https://trycode.pw/">trycode</a> - песочница</li>
-                  <li><a target="_blank" href="https://replit.com/">replit</a> - песочница</li>
-                  <li>
-                    <a target="_blank" href="https://jigsaw.w3.org/css-validator/#validate_by_input">CSS валидатор</a>
-                  </li>
-                  <li>
-                    <a target="_blank" href="https://validator.w3.org/#validate_by_input">HTML валидатор</a>
-                  </li>
-                  <li>
-                    <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference"
-                      >Справочник JavaScript</a
-                    >
-                  </li>
-                  <li>
-                    <a target="_blank" href="https://learn.javascript.ru/">Современный учебник JavaScript</a>
-                  </li>
-                  <li>
-                    <a target="_blank" href="https://regex101.com/">Проверка регулярных выражений</a>
-                  </li>
-                  <li>
-                    <a target="_blank" href="https://fonts-online.ru/">Шрифты</a>
-                  </li>
-                  <li>
-                    <a href="https://www.fl.ru/users/imgusev/portfolio/" target="_blank">FreeLancer</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div class="hero-avatar">
+            <img src="/images/ava.webp" alt="Илья Гусев" width="800" height="800" />
+            <a
+              class="hero-badge"
+              href="https://www.codewars.com/users/imgusev"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="https://www.codewars.com/users/imgusev/badges/micro"
+                alt="CodeWars badge"
+              />
+            </a>
           </div>
         </div>
+      </section>
+
+      <section id="about" class="section container">
+        <header class="section-head">
+          <span class="section-num">01</span>
+          <h2 class="section-title" data-i18n="about.title">О себе</h2>
+        </header>
+        <div class="about-grid">
+          <p data-i18n="about.p1">
+            Родился в 1985 году в Вологде. С компьютерами с 1995-го — сначала
+            DOS и BASIC, потом сети, веб и разработка. С тех пор техника
+            стала образом жизни и профессией.
+          </p>
+          <p data-i18n="about.p2">
+            Сегодня — Full Stack Developer: пишу серверные сервисы и
+            интерфейсы, проектирую интеграции, поднимаю инфраструктуру.
+            Ценю простые решения, которые легко поддерживать.
+          </p>
+          <ul class="about-facts">
+            <li>
+              <span class="fact-key" data-i18n="about.fact1Key">Опыт</span>
+              <span class="fact-val" data-i18n="about.fact1Val">30+ лет с ПК</span>
+            </li>
+            <li>
+              <span class="fact-key" data-i18n="about.fact2Key">Локация</span>
+              <span class="fact-val" data-i18n="about.fact2Val">Россия</span>
+            </li>
+            <li>
+              <span class="fact-key" data-i18n="about.fact3Key">Языки</span>
+              <span class="fact-val" data-i18n="about.fact3Val">Русский</span>
+            </li>
+            <li>
+              <span class="fact-key" data-i18n="about.fact4Key">Хобби</span>
+              <span class="fact-val" data-i18n="about.fact4Val">Фото, бильярд</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="experience" class="section container">
+        <header class="section-head">
+          <span class="section-num">02</span>
+          <h2 class="section-title" data-i18n="experience.title">Опыт</h2>
+        </header>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="experience.item1.date">
+                2024 — настоящее время
+              </span>
+            </div>
+            <div class="timeline-card">
+              <h3 data-i18n="experience.item1.role">
+                Руководитель команды разработки
+              </h3>
+              <p class="timeline-company" data-i18n="experience.item1.company">
+                ЦП КаМАЗ · Набережные Челны
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="experience.item2.date">
+                2021 — 2024
+              </span>
+            </div>
+            <div class="timeline-card">
+              <h3 data-i18n="experience.item2.role">Руководитель разработки</h3>
+              <p class="timeline-company" data-i18n="experience.item2.company">
+                ООО «СоКИТ» · Вологда
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="experience.item3.date">
+                2017 — 2021
+              </span>
+            </div>
+            <div class="timeline-card">
+              <h3 data-i18n="experience.item3.role">
+                Директор по развитию бизнеса
+              </h3>
+              <p class="timeline-company" data-i18n="experience.item3.company">
+                ООО ШИО «Первый экстернат» · Москва
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="experience.item4.date">
+                2005 — 2017
+              </span>
+            </div>
+            <div class="timeline-card">
+              <h3 data-i18n="experience.item4.role">Предприниматель</h3>
+              <p class="timeline-company" data-i18n="experience.item4.company">
+                Собственный бизнес · Вологда
+              </p>
+            </div>
+          </li>
+        </ol>
+        <p class="timeline-note" data-i18n="experience.note">
+          Подробности и более полная история — на
+          <a href="https://www.linkedin.com/in/imgusev/" target="_blank" rel="noopener">LinkedIn</a>.
+        </p>
+      </section>
+
+      <section id="stack" class="section container">
+        <header class="section-head">
+          <span class="section-num">03</span>
+          <h2 class="section-title" data-i18n="stack.title">Технологический стек</h2>
+        </header>
+
+        <div class="stack-grid">
+          <article class="stack-card">
+            <h3 data-i18n="stack.languages">Языки</h3>
+            <ul class="stack-icons">
+              <li><i class="devicon-python-plain colored"></i><span>Python</span></li>
+              <li><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></li>
+              <li><i class="devicon-php-plain colored"></i><span>PHP</span></li>
+              <li><i class="devicon-go-original-plain colored"></i><span>Go</span></li>
+              <li><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></li>
+              <li><i class="devicon-bash-plain colored"></i><span>Bash</span></li>
+            </ul>
+          </article>
+
+          <article class="stack-card">
+            <h3 data-i18n="stack.frontend">Frontend</h3>
+            <ul class="stack-icons">
+              <li><i class="devicon-html5-plain colored"></i><span>HTML5</span></li>
+              <li><i class="devicon-css3-plain colored"></i><span>CSS3</span></li>
+              <li><i class="devicon-react-original colored"></i><span>React</span></li>
+              <li><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></li>
+              <li><i class="devicon-sass-original colored"></i><span>Sass</span></li>
+            </ul>
+          </article>
+
+          <article class="stack-card">
+            <h3 data-i18n="stack.backend">Backend</h3>
+            <ul class="stack-icons">
+              <li><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></li>
+              <li><i class="devicon-django-plain colored"></i><span>Django</span></li>
+              <li><i class="devicon-flask-original colored"></i><span>Flask</span></li>
+              <li><i class="devicon-laravel-plain colored"></i><span>Laravel</span></li>
+            </ul>
+          </article>
+
+          <article class="stack-card">
+            <h3 data-i18n="stack.databases">Базы данных</h3>
+            <ul class="stack-icons">
+              <li><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></li>
+              <li><i class="devicon-mysql-plain colored"></i><span>MySQL</span></li>
+              <li><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></li>
+              <li><i class="devicon-redis-plain colored"></i><span>Redis</span></li>
+              <li><i class="devicon-sqlite-plain colored"></i><span>SQLite</span></li>
+            </ul>
+          </article>
+
+          <article class="stack-card">
+            <h3 data-i18n="stack.devops">DevOps и инфраструктура</h3>
+            <ul class="stack-icons">
+              <li><i class="devicon-docker-plain colored"></i><span>Docker</span></li>
+              <li><i class="devicon-linux-plain colored"></i><span>Linux</span></li>
+              <li><i class="devicon-nginx-original colored"></i><span>Nginx</span></li>
+              <li><i class="devicon-git-plain colored"></i><span>Git</span></li>
+              <li><i class="devicon-github-original"></i><span>GitHub Actions</span></li>
+            </ul>
+          </article>
+
+          <article class="stack-card">
+            <h3 data-i18n="stack.cms">CMS и платформы</h3>
+            <ul class="stack-icons">
+              <li><i class="devicon-wordpress-plain colored"></i><span>WordPress</span></li>
+              <li><i class="devicon-joomla-plain colored"></i><span>Joomla</span></li>
+              <li><span class="stack-text">Bitrix</span></li>
+              <li><span class="stack-text">OpenCart</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="hobby" class="section container">
+        <header class="section-head">
+          <span class="section-num">04</span>
+          <h2 class="section-title" data-i18n="hobby.title">Хобби</h2>
+        </header>
+        <div class="hobby-grid">
+          <article class="hobby-card">
+            <div class="hobby-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                <circle cx="12" cy="13" r="4" />
+              </svg>
+            </div>
+            <h3 data-i18n="hobby.photo.title">Фотография</h3>
+            <p data-i18n="hobby.photo.desc">
+              Снимаю людей, города и моменты. Стараюсь видеть истории
+              там, где их обычно не замечают.
+            </p>
+          </article>
+
+          <article class="hobby-card">
+            <div class="hobby-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h3 data-i18n="hobby.billiards.title">Бильярд</h3>
+            <p data-i18n="hobby.billiards.desc">
+              Игра с детства. Помогает держать концентрацию
+              и спокойствие — те же качества, что и в работе.
+            </p>
+          </article>
+
+          <article class="hobby-card">
+            <div class="hobby-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </div>
+            <h3 data-i18n="hobby.retro.title">Ретро-ПК</h3>
+            <p data-i18n="hobby.retro.desc">
+              Собираю и восстанавливаю старые машины — ПК эпохи DOS
+              и первых Windows. Ностальгия и интерес к истории техники.
+            </p>
+          </article>
+        </div>
+
+        <div class="hobby-gallery">
+          <figure>
+            <img
+              src="/images/pc/004.webp"
+              alt="Программирование на BASIC"
+              loading="lazy"
+            />
+            <figcaption data-i18n="hobby.gallery.basic">
+              Первые шаги — BASIC
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/images/pc/001.webp"
+              alt="Сетевая игра, 2000 год"
+              loading="lazy"
+            />
+            <figcaption data-i18n="hobby.gallery.lan">
+              Сетевые игры, 2000-е
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="contacts" class="section container">
+        <header class="section-head">
+          <span class="section-num">05</span>
+          <h2 class="section-title" data-i18n="contacts.title">Контакты</h2>
+        </header>
+        <p class="contacts-lead" data-i18n="contacts.lead">
+          Открыт к интересным проектам и сотрудничеству.
+          Пишите удобным способом — отвечу.
+        </p>
+        <ul class="contacts-list">
+          <li>
+            <a href="https://t.me/imgusev" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"
+                />
+              </svg>
+              <span>Telegram</span>
+              <span class="contact-val">@imgusev</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/imgusev" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12 .5C5.73.5.99 5.24.99 11.5c0 4.85 3.16 8.96 7.55 10.41.55.1.75-.24.75-.53 0-.26-.01-.95-.02-1.87-3.07.67-3.72-1.48-3.72-1.48-.5-1.28-1.23-1.62-1.23-1.62-1-.69.08-.67.08-.67 1.11.08 1.69 1.14 1.69 1.14.99 1.69 2.6 1.2 3.23.92.1-.72.39-1.2.7-1.47-2.45-.28-5.02-1.22-5.02-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.92 0 0 .92-.29 3.02 1.12.88-.24 1.82-.36 2.76-.37.94.01 1.88.13 2.76.37 2.1-1.41 3.02-1.12 3.02-1.12.6 1.52.22 2.64.11 2.92.7.77 1.13 1.75 1.13 2.95 0 4.22-2.58 5.14-5.04 5.42.4.34.76 1.02.76 2.06 0 1.49-.01 2.69-.01 3.05 0 .3.2.64.76.53 4.39-1.45 7.55-5.56 7.55-10.41C23.01 5.24 18.27.5 12 .5z"
+                />
+              </svg>
+              <span>GitHub</span>
+              <span class="contact-val">imgusev</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/imgusev/"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"
+                />
+              </svg>
+              <span>LinkedIn</span>
+              <span class="contact-val">imgusev</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@imgusev.ru">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24l-8 5-8-5V6l8 5 8-5v2.24z"
+                />
+              </svg>
+              <span>Email</span>
+              <span class="contact-val">info@imgusev.ru</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.codewars.com/users/imgusev"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M2 12l5-7 3 4 5-7 5 7-3 4 5 7H2zm5.5-3l2 3 2.5-4 2.5 4 2-3-4.5-6z"
+                />
+              </svg>
+              <span>CodeWars</span>
+              <span class="contact-val">imgusev</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.fl.ru/users/imgusev/portfolio/"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M20 6h-4V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zM10 4h4v2h-4V4z"
+                />
+              </svg>
+              <span>FL.ru</span>
+              <span class="contact-val" data-i18n="contacts.portfolio">Портфолио</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>&copy; IMGusev 2014–<span id="year"></span></div>
+        <div class="footer-meta" data-i18n="footer.meta">
+          Сделано на чистом HTML, CSS и JS · GitHub Pages
+        </div>
       </div>
-      <div class="footer container-fluid sticky-bottom">
-        <div class="copy">&copy; IMGusev 2014-<span id="year"></span></div>
-      </div>
-    </div>
-    <script src="js/main.js"></script>
+    </footer>
+
+    <script src="/js/main.js?ver=2.0.0"></script>
   </body>
 </html>
